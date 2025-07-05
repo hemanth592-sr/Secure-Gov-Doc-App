@@ -1,4 +1,4 @@
-// Firebase Configuration (Your Firebase details)
+// Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAgqqM-dNfku0tzMTVGsnVSXUxgX3UP5p0",
   authDomain: "govdocapp-f4403.firebaseapp.com",
@@ -12,6 +12,6 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Services
+// Firebase Services
 const auth = firebase.auth();
 const db = firebase.firestore();

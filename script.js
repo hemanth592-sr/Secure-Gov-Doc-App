@@ -4,7 +4,7 @@ function registerUser() {
   const password = document.getElementById('register-password').value;
 
   auth.createUserWithEmailAndPassword(email, password)
-    .then(user => {
+    .then(() => {
       alert("Registered Successfully!");
     })
     .catch(error => {
@@ -18,7 +18,7 @@ function loginUser() {
   const password = document.getElementById('login-password').value;
 
   auth.signInWithEmailAndPassword(email, password)
-    .then(user => {
+    .then(() => {
       document.getElementById('auth-section').style.display = 'none';
       document.getElementById('user-section').style.display = 'block';
       document.getElementById('user-email').innerText = email;
@@ -60,7 +60,7 @@ function saveDocInfo() {
   .then(() => {
     alert("Document Info Saved Successfully!");
   })
-  .catch((error) => {
+  .catch(error => {
     alert("Error saving document: " + error.message);
   });
 }
