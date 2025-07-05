@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Gov Document App</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+</head>
+<body>
+  <h2>Secure & Share Govt Documents</h2>
+
+  <!-- Registration -->
+  <div id="auth-section">
+    <h3>Register</h3>
+    <input type="email" id="register-email" placeholder="Email"><br>
+    <input type="password" id="register-password" placeholder="Password"><br>
+    <button onclick="registerUser()">Register</button>
+
+    <h3>Login</h3>
+    <input type="email" id="login-email" placeholder="Email"><br>
+    <input type="password" id="login-password" placeholder="Password"><br>
+    <button onclick="loginUser()">Login</button>
+  </div>
+
+  <!-- User Section -->
+  <div id="user-section" style="display: none;">
+    <h3>Welcome, <span id="user-email"></span></h3>
+    <button onclick="logoutUser()">Logout</button>
+
+    <!-- Document Info -->
+    <h4>Upload Document Info (No file)</h4>
+    <input type="text" id="doc-title" placeholder="Document Title"><br>
+    <input type="text" id="doc-type" placeholder="Document Type"><br>
+    <input type="text" id="aadhaar" placeholder="Aadhaar Number"><br>
+    <input type="email" id="share-email" placeholder="Share with Email"><br>
+    <button onclick="saveDocInfo()">Save Document Info</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
